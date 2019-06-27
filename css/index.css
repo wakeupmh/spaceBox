@@ -4,6 +4,8 @@ body{
     padding: 0px;
     width: 100%;
     background-image: linear-gradient(#d9d9d9, white);
+    background-attachment: fixed;
+    text-align: center;
 }
 .header{
     width: 100%;
@@ -11,7 +13,7 @@ body{
     background-image: linear-gradient(45deg, #4dd2d1, #092532);
 }
 .container{
-    width: 100%;
+    width: 90%;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -23,11 +25,14 @@ body{
     margin: 12px;
     box-shadow: 0px 3px 8px #0000004d;
 }
-.items img{
-    width: 9em;
+.items .img{
+    width: 40%;
+    padding-bottom: 40%;
+    background-size: cover;
+    background-position: center;
     border-radius: 50%;
     float: left;
-    padding: 5%;
+    margin: 5%;
 }
 .badge{
     position: relative;
@@ -35,25 +40,78 @@ body{
 .badge div{
     position: absolute;
     background-color: #4dd2d1;
-    padding: 8px;
-    width: 20px;
+    padding: 6px;
+    width: 18px;
     border-radius: 50%;
     font-weight: bold;
     text-align: center;
-    font-size: 18px;
-    top: 1.2em;
-    left: 7em;
+    font-size: 1em;
+    top: 5px;
+    right: 0px;
 }
 .items .ctnText{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-top: 3em;
-    font-size: 20px;
+    margin-top: 15%;
+    font-size: 1em;
+    width:50%;
+    text-align: left;
 }
 .items span{
     color:grey;
 }
 .items strong{
     color:#092532;
+}
+@media screen and (min-width:1000px){
+    .badge div{
+        top: 3px;
+        right: 4px;
+        width: 22px;
+        padding: 8px;
+        font-size: 1.2em;
+    }
+    .items .ctnText{
+        font-size: 1.4em;
+    }
+}
+@media screen and (max-width:730px){
+    .items{
+        width: 26%;
+    }
+    .items .ctnText{
+        font-size: 0.7em;
+    }
+    .badge div{
+        padding: 4px;
+        width: 13px;
+        font-size: 0.8em;
+        top: 0px;
+        right: -5px
+    }
+}
+@media screen and (max-width:730px){
+    .items .ctnText{
+        font-size: 0.5em;
+    }
+    .badge div {
+        padding: 2px;
+        width: 10px;
+        font-size: 0.5em;
+        top: 1px;
+        right: -1px;
+    }
+}
+@media screen and (min-width:1550px){
+    .badge div {
+        top: 10px;
+        right: 4px;
+        width: 35px;
+        padding: 10px;
+        font-size: 2em;
+    }
+    .items .ctnText{
+        font-size: 2em;
+    }
 }
