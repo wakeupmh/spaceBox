@@ -4,7 +4,7 @@
     </head>
     <body>
         <div class="header">
-
+            <img src="imgs/spacebox.png">
         </div>
         <dialog>
 
@@ -15,4 +15,12 @@
     </body>
     <script src="js/dados.json"></script>
     <script src="js/index.js"></script>
+    <script>
+        document.addEventListener('click',(e)=>{ 
+            if(e.target.className == 'container' || e.target.tagName == 'BODY' || e.target.className == 'header'){
+                document.querySelector('dialog').removeAttribute('open');
+                handlers.removeOthersColorized();
+            }
+        })
+    </script>
 </html>
