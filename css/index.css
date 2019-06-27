@@ -9,23 +9,8 @@ body{
     font-family: sans-serif;
     color: #092532;
 }
-
-.header{
-    width: 100%;
-    padding-bottom: 10%;
-    background-image: linear-gradient(45deg, #4dd2d1, #092532);
-    position: relative;
-}
-.header img{
-    max-width: 20%;
-    height: auto;
-    float: left;
-    position: absolute;
-    top: -18%;
-    left: 6%;
-}
 .container{
-    margin-top: 3em;
+    margin-top: 1em;
     width: 90%;
     display: inline-flex;
     flex-wrap: wrap;
@@ -73,6 +58,10 @@ body{
 }
 .items span{
     color:grey;
+    font-size: 0.9em;
+}
+dialog[open=true]{
+    display: flex;
 }
 dialog {
     background-color: #f1f1f1;
@@ -80,7 +69,7 @@ dialog {
     position: relative;
     top: 2em;
     border: 0px;
-    padding-bottom: 4%;
+    padding-bottom: 2%;
     box-shadow: 0px 3px 8px #0000004d;
 }
 dialog .dlgContainer{
@@ -116,6 +105,69 @@ dialog strong {
 .spanClicked{
     color:#f1f1f1 !important;
 }
+.header{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background-image: linear-gradient(45deg, #4dd2d1, #092532);
+    position: relative;
+    text-align: right;
+}
+.header img{
+    width: 9em;
+    height: auto;
+    float: left;
+    margin: -1em 2em -2em 2em;
+}
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+    color:#f1f1f1;
+}
+.menu {
+    margin: 0 30px 0 0;
+}
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: #f1f1f1;
+    margin: 0 10px;
+    line-height: 70px;
+    
+}
+#toggle {
+    display: none;
+    color:#f1f1f1;
+}
+@media only screen and (max-width: 540px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .menu a {
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0;
+     
+    }
+    #toggle:checked + .menu {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        background-image: linear-gradient(45deg, #4dd2d1, #092532);
+    }
+    
+}
 @media screen and (max-width:730px){
     .items{
         width: 26%;
@@ -148,6 +200,9 @@ dialog strong {
     }
     .items span{
         font-size: 1.2em;
+    }
+    .header img{ 
+        margin: -1em 2em -2em 4em;
     }
 }
 @media screen and (min-width:1550px){
